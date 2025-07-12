@@ -1,4 +1,4 @@
-package anonimous_class;
+package anonymous_class;
 
 public class Car {
     private String model;
@@ -13,6 +13,7 @@ public class Car {
             public Engine engine;
             @Override
             public void start() {
+                // Anonymous inner class inside of anonymous class
                 this.engine = new Engine() {
                     @Override
                     public void start() {
