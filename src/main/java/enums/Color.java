@@ -3,7 +3,8 @@ package enums;
 public enum Color {
     RED("FF0000"),
     GREEN("00FF00"),
-    BLUE("0000FF");
+    BLUE("0000FF"),
+    WHITE("FFFFFF");
 
     private final String hexCode;
 
