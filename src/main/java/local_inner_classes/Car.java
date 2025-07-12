@@ -5,7 +5,7 @@ public class Car {
     private String make;
     private String model;
 
-    public void start() {
+    public void start(int horsepower) {
         System.out.println("Starting the car");
 
         class Engine {
@@ -20,13 +20,13 @@ public class Car {
             }
         }
 
-        Engine engine = new Engine(200);
+        Engine engine = new Engine(horsepower);
         engine.rev();
     }
 
     public static void main(String[] args) {
         Car car = new Car();
-        car.start();
+        car.start(1000);
     }
 }
 
