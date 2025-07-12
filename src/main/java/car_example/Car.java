@@ -35,6 +35,17 @@ public class Car {
         public void shift() {
             System.out.println("Shifting transmission with " + type + " type.");
         }
+
+        @Override
+        public String toString() {
+            return "Transmission{" +
+                    "type='" + type + '\'' +
+                    '}';
+        }
+
+        public void ReplaceCurrentTransmission(){
+            Car.this.transmission = this;
+        }
     }
 
     public static void main(String[] args) {

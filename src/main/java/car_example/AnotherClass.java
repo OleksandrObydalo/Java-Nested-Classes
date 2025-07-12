@@ -9,5 +9,13 @@ public class AnotherClass {
         System.out.println("Transmission type: " + myCar.transmission);
 //        myCar.engine.start(); // Causes error as Engine class is private
         myCar.transmission.shift();
+
+        Car.Transmission transmission = myCar.new Transmission("manual");
+        System.out.println("transmission = " + transmission);
+        System.out.println("myCar.transmission = " + myCar.transmission);
+        System.out.println("After calling transmission.ReplaceCurrentTransmission();");
+        transmission.ReplaceCurrentTransmission();
+        System.out.println("transmission = " + transmission);
+        System.out.println("myCar.transmission = " + myCar.transmission);
     }
 }
