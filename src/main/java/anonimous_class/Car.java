@@ -10,15 +10,32 @@ public class Car {
         this.year = year;
         // Anonymous inner class for setting up the engine
         this.engine = new Engine() {
+            public Engine engine;
             @Override
             public void start() {
+                this.engine = new Engine() {
+                    @Override
+                    public void start() {
+                        System.out.println("The engine of the car " + model + " has started.");
+                    }
+
+                    @Override
+                    public void stop() {
+                        System.out.println("The engine of the car " + model + " has stopped.");
+                    }
+
+                };
+
                 System.out.println("The engine of the car " + model + " has started.");
+                System.out.println("Result of this.engine.start();");
+                this.engine.start();
             }
 
             @Override
             public void stop() {
                 System.out.println("The engine of the car " + model + " has stopped.");
             }
+
         };
     }
 
