@@ -5,17 +5,24 @@ enum DayOfWeek {
 }
 
 public class Example {
-    public static void main(String[] args) {
-        DayOfWeek today = DayOfWeek.MONDAY;
 
-        switch (today) {
-            case MONDAY, TUESDAY, WEDNESDAY, THURSDAY, FRIDAY ->
-                    System.out.println("Today is a work day");
-            case SATURDAY, SUNDAY ->
-                    System.out.println("Today is a weekend day");
-            default ->
-                    System.out.println("Invalid day");
+
+    public static void main(String[] args) {
+
+        for(DayOfWeek dayOfWeek: DayOfWeek.values()){
+            System.out.println(DayOfWeektoString(dayOfWeek));
         }
+
+    }
+
+    private static String DayOfWeektoString(DayOfWeek today) {
+        return switch (today) {
+            case MONDAY, TUESDAY, WEDNESDAY, THURSDAY, FRIDAY ->
+                   "Today is " + today + " and it`s  a work day";
+            case SATURDAY, SUNDAY ->
+                    "Today is " + today + " and it`s a weekend";
+            default -> "Invalid day";
+        };
     }
 }
 

@@ -24,7 +24,7 @@ public enum Color {
         Color myColor = Color.RED;
         System.out.println(myColor.getHexCode());
         for (Color color : Color.values()) {
-            System.out.println(color + " has a hex code of " + color.getHexCode());
+            System.out.println(color.ordinal() + ". " + color + "has a hex code of " + color.getHexCode());
         }
     }
 }
